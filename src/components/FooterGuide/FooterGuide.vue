@@ -39,57 +39,59 @@
     justify-content: space-around;
     background-color: #fafafa;
     .footer{
-      display: block;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
       width:200/@rem;
-      height: 142/@rem;
+      height: 98/@rem;
       text-align:center;
       .footer-icon{
-        display: block;
+        //display: block;
         background-repeat: no-repeat;
-        background-size: 60/@rem;
-        width: 60/@rem;
-        height: 60/@rem;
+        background-size: 100%;
+        width: 40/@rem;
+        height: 40/@rem;
         margin: 0 auto;
-        margin-top:15/@rem;
+        margin-bottom: 10/@rem;
       }
       &:nth-child(1){
         .footer-icon{
-          background-image: url("./img/footer.png");
-          background-position: 0px -300/@rem;
+          background-image: url("../../common/img/footer.png");
+          background-position: 0px -250/@rem;
         }
       }
       &:nth-child(2){
         .footer-icon{
-          background-image: url("./img/footer.png");
-          background-position: 0px -870/@rem;
+          background-image: url("../../common/img/footer.png");
+          background-position: 0px -350/@rem;
         }
       }
       &:nth-child(3){
         .footer-icon{
-          background-image: url("./img/footer.png");
-          background-position: 0px -370/@rem;
+          background-image: url("../../common/img/footer.png");
+          background-position: 0px -150/@rem;
         }
       }
       &:nth-child(4){
         .footer-icon{
-          background-image: url("./img/footer.png");
-          background-position: 0px -120/@rem;
+          background-image: url("../../common/img/footer.png");
+          background-position: 0px -50/@rem;
         }
       }
       &:nth-child(5){
         .footer-icon{
-          background-image: url("./img/footer.png");
+          background-image: url("../../common/img/footer.png");
           background-position: 0px 100%;
         }
       }
       .footer-name{
         font-family: "Microsoft YaHei UI";
-        font-size: 35/@rem;
+        font-size:24/@rem;
         color:#666;
       }
       &.active1{
         .footer-icon{
-          background-position: 0px -499/@rem;
+          background-position: 0px -200/@rem;
         }
         .footer-name{
           color:#b4282d;
@@ -97,7 +99,7 @@
       }
       &.active2{
         .footer-icon{
-          background-position: 0px -745/@rem;
+          background-position: 0px -300/@rem;
         }
         .footer-name{
           color:#b4282d;
@@ -105,7 +107,7 @@
       }
       &.active3{
         .footer-icon{
-          background-position: 0px -250/@rem;
+          background-position: 0px -100/@rem;
         }
         .footer-name{
           color:#b4282d;

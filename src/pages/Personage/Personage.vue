@@ -1,11 +1,17 @@
 <template>
   <div>
+   <header-guide/>
     personage
   </div>
 </template>
 
 <script>
-  export default {}
+  import HeaderGuide from '../../components/HeaderGuide/HeaderGuide'
+  export default {
+    components:{
+      HeaderGuide
+    }
+  }
 </script>
 
 <style lang="less" rel="stylesheet/less">
