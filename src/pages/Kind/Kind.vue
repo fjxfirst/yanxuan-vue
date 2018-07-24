@@ -1,40 +1,55 @@
 <template>
-  <div>
-    <div class="top-search">
-      <div class="search-inner">
-        <i></i>
-        <p class="search-text">搜索商品，共<span>10857</span>款好物</p>
-      </div>
+  <div class="fenlei">
+    <router-link class="top-search" to="">
+    <div class="search-inner">
+      <i class="icon-search"></i>
+      <p class="search-text">搜索商品，共<span>10857</span>款好物</p>
     </div>
+  </router-link>
     <section class="classify-content">
       <div class="leftClassify">
         <div class="classify-container">
           <ul class="classify-list">
-            <li class="on">推荐专区</li>
-            <li>爆品区</li>
-            <li>夏季专区</li>
-            <li>居家</li>
-            <li>鞋包配饰</li>
-            <li>服装</li>
-            <li>电器</li>
-            <li>洗护</li>
-            <li>饮食</li>
-            <li>餐厨</li>
-            <li>婴童</li>
-            <li>文体</li>
-            <li>特色区</li>
+            <li :class="{on:cateIndex===index}" v-for="(cate,index) in categorys" :key="index"
+                @click="getCate(index)">{{cate.name}}</li>
           </ul>
         </div>
       </div>
-      <RightContent/>
+        <RightContent v-if="currentCate" :currentCate="currentCate"/>
     </section>
   </div>
 </template>
 
 <script>
   import RightContent from '../../components/RightContent/RightContent'
-
+  import BScroll from 'better-scroll'
+  import {mapState} from 'vuex'
   export default {
+    data(){
+      return {
+        cateIndex:0,
+      }
+    },
+    mounted(){
+      this.$store.dispatch('getCategorys')
+      const classifyScroll=new BScroll('.classify-container',{
+        scrollX:false,
+        scrollY:true,
+      })
+    },
+    methods:{
+      getCate(index){
+        this.cateIndex=index;
+      }
+    },
+    computed:{
+      ...mapState(['categorys']),
+      currentCate(){
+        if(this.categorys[this.cateIndex]){
+          return this.categorys[this.cateIndex];
+        }
+      }
+    },
     components: {
       RightContent
     }
@@ -45,33 +60,86 @@
   @import "../../common/less/remAdaptive.less";
   @import "../../common/css/fonts.css";
 
-  .top-search {
-    width: 100%;
-    .search-inner {
-      i {
-      }
-      .search-text {
-
+  .fenlei{
+    height:100%;
+    .top-search {
+      display: flex;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      height: 88/@rem;
+      background-color: #fff;
+      justify-content: center;
+      align-items: center;
+      border-bottom: 1px solid #EEEEEE;
+      z-index: 1;
+      .search-inner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #EDEDED;
+        font-size: 28/@rem;
+        width: 690/@rem;
+        height:56/@rem;
+        border-radius: 8/@rem;
       }
     }
-  }
 
-  .classify-content {
-    width: 100%;
-    .leftClassify {
-      width: 21.6%;
-      background-color: aquamarine;
-      float: left;
-      .classify-container {
-        .classify-list {
-          li {
-
-          }
-          .on {
-
+    .classify-content {
+      height:100%;
+      width: 100%;
+      padding-top: 88/@rem;
+      background-color: #fff;
+      box-sizing: border-box;
+      position: fixed;
+      top:0;
+      .leftClassify {
+        width: 21.6%;
+        background-color: aquamarine;
+        float: left;
+        height:100%;
+        box-sizing: border-box;
+        padding-bottom: 98/@rem;
+        background-color: #fff;
+        border-right: 1px solid #ECECEC;
+        .classify-container {
+          height:100%;
+          overflow: hidden;
+          .classify-list {
+            height: 100%;
+            padding-bottom: 100/@rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            li {
+              width: 100%;
+              height: 50/@rem;
+              line-height: 50/@rem;
+              font-size: 28/@rem;
+              white-space: nowrap;
+              color: #333;
+              text-align: center;
+              position: relative;
+              font-family: PingFangSC-Light,helvetica,'Heiti SC';;
+            }
+            .on {
+              box-sizing: border-box;
+              font-size: 36/@rem;
+              color: #ab2b2b;
+              &:before{
+                content: ' ';
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                width: 6/@rem;
+                background-color: #ab2b2b;
+              }
+            }
           }
         }
       }
     }
   }
+
 </style>

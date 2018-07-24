@@ -7,6 +7,9 @@ import KnowGood from '../pages/KnowGood/KnowGood'
 import Personage from '../pages/Personage/Personage'
 import ShopCart from '../pages/ShopCart/ShopCart'
 import DownLoad from '../pages/DownLoad/DownLoad'
+import HomeMain from '../components/HomeMain/HomeMain'
+import Cate from '../components/Cate/Cate'
+import Regist from '../pages/Regist/Regist'
 Vue.use(Router)
 
 export default new Router({
@@ -30,7 +33,27 @@ export default new Router({
       component:Home,
       meta:{
         isShow:true
-      }
+      },
+      children:[
+        {
+          path: '/Home/HomeMain',
+          component: HomeMain,
+          meta:{
+            isShow:true
+          }
+        },
+        {
+          path:'/Home/Cate/:index',
+          component: Cate,
+          meta:{
+            isShow:true
+          }
+        },
+        {
+          path:'',
+          redirect:'/Home/HomeMain'
+        }
+      ]
     },
     {
       path:'/Kind',
@@ -52,9 +75,6 @@ export default new Router({
       path:'/Personage',
       name:'Personage',
       component:Personage,
-      meta:{
-        isShow:true
-      }
     },
     {
       path:'/ShopCart',
@@ -63,6 +83,11 @@ export default new Router({
       meta:{
         isShow:true
       }
+    },
+    {
+      path:'/Regist',
+      component:Regist
     }
+
   ]
 })

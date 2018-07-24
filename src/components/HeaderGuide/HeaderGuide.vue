@@ -22,9 +22,13 @@
     height: 88/@rem;
     line-height: 88/@rem;
     background-color: #FAFAFA;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    position: fixed;
+    top: 0;
+    z-index: 2;
     .home-icon{
       width: 48/@rem;
       height: 44/@rem;

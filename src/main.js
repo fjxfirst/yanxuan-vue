@@ -5,7 +5,9 @@ import App from './App'
 import router from './router'
 import '../static/js/adaptive'
 import 'reset-css'
-
+import store from './store'
+import './mock/mockServer'
+import './filters'
 
 
 /* eslint-disable no-new */
@@ -13,5 +15,6 @@ new Vue({
   el: '#app',
   router,
   components: { App },
-  template: '<App/>'
+  template: '<App/>',
+  store
 })

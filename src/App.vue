@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="app">
     <!--<interlayer v-show="$route.meta.isShow"/>-->
     <router-view></router-view>
     <footer-guide v-show="$route.meta.isShow"/>
@@ -18,4 +18,7 @@
 </script>
 
 <style lang="less" rel="stylesheet/less">
+  .app{
+    height: 100%;
+  }
 </style>

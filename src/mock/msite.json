@@ -5108,36 +5108,6 @@
               "detail": {
                   "appSyn": 1,
                   "linkType": 2,
-                  "linkUrl": "https://m.you.163.com/cart/itemPool?promotionId=1241079",
-                  "pcLinkUrl": "http://you.163.com/cart/itemPool?promotionId=1241079",
-                  "pcPicUrl": "https://yanxuan.nosdn.127.net/0a10df054e157212d4371d5a39150298.jpg",
-                  "picUrl": "https://yanxuan.nosdn.127.net/d8a4b4831cc61d8f1a379d14a93e8eae.jpg",
-                  "wapLinkUrl": "https://m.you.163.com/cart/itemPool?promotionId=1241079",
-                  "wapPicUrl": "https://yanxuan.nosdn.127.net/d8a4b4831cc61d8f1a379d14a93e8eae.jpg"
-              },
-              "itemId": "",
-              "materialId": "10425150",
-              "materialName": "活动 配件配饰满额减",
-              "materialType": "广告banner",
-              "operator": "张宛亭",
-              "resourcesId": 7,
-              "taskId": "10469494",
-              "taskType": 1
-          },
-          "id": 10425150,
-          "name": "活动 配件配饰满额减",
-          "onlineTime": 0,
-          "picUrl": "https://yanxuan.nosdn.127.net/d8a4b4831cc61d8f1a379d14a93e8eae.jpg",
-          "targetUrl": "https://m.you.163.com/cart/itemPool?promotionId=1241079"
-      },
-      {
-          "expireTime": 0,
-          "extra": {
-              "crmUserGroupId": "0",
-              "crmUserGroupName": "无分组",
-              "detail": {
-                  "appSyn": 1,
-                  "linkType": 2,
                   "linkUrl": "https://m.you.163.com/topic/v1/pub/VVxKhviPfT.html",
                   "pcLinkUrl": "http://you.163.com/topic/v1/pub/VVxKhviPfT.html",
                   "pcPicUrl": "https://yanxuan.nosdn.127.net/c9826484a34db40145b25773224cbf30.jpg",
@@ -8319,16 +8289,7 @@
           "title": "行李箱太好用，天天盼出行",
           "topicId": 2364
       },
-      {
-          "id": 1020000,
-          "itemPicUrl": "https://yanxuan.nosdn.127.net/15274943754272422.jpg",
-          "linkUrl": "http://m.you.163.com/topic/v1/pub/vwo1m8AUBO.html",
-          "priceInfo": 0,
-          "scenePicUrl": "https://yanxuan.nosdn.127.net/15274943754272422.jpg",
-          "subtitle": "虽然夏天刚到不久，但我们被用户追着问“小龙虾什么时候能上架”已经一个月了。这一个...",
-          "title": "小龙虾重出江湖记",
-          "topicId": 2647
-      },
+
       {
           "id": 1020001,
           "itemPicUrl": "https://yanxuan.nosdn.127.net/ff43f45e40c6998a0897446534ab3458.jpg",

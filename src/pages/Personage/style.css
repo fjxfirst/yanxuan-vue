@@ -1,0 +1,44 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?cnn2qt');
+  src:  url('fonts/icomoon.eot?cnn2qt#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?cnn2qt') format('truetype'),
+    url('fonts/icomoon.woff?cnn2qt') format('woff'),
+    url('fonts/icomoon.svg?cnn2qt#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-weixin:before {
+  content: "\e906";
+}
+.icon-trunright:before {
+  content: "\e907";
+}
+.icon-iphone:before {
+  content: "\e908";
+}
+.icon-qq:before {
+  content: "\e909";
+}
+.icon-weibo:before {
+  content: "\e910";
+}
+.icon-email:before {
+  content: "\e911";
+}
